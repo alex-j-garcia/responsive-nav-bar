@@ -1,0 +1,26 @@
+/* || General Styles */
+:root {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+/* || Utilities */
+.debugging {
+  border: 1px solid red;
+}
+
+.flex {
+  display: flex;
+}
+
+.noBullets {
+  list-style-type: none;
+}
