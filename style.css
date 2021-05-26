@@ -42,7 +42,7 @@ a {
   margin-top: 4rem;
 }
 
-.mainNavigation-menu {
+.mainNavigation-menu > ul {
   display: none;
 }
 
