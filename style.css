@@ -13,9 +13,9 @@
 }
 
 body {
-  width: 95%;
+  width: 97%;
   margin: 0 auto;
-  background-color: hsl(0, 0%, 4%);
+  background-color: rgb(10, 10, 10);
 }
 
 a {
@@ -23,9 +23,13 @@ a {
   color: hsl(0, 0%, 89%);
 }
 
+a:hover {
+  color: hsl(0, 0%, 89%);
+}
+
 /* || Typography */
 a {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-family: Helvetica, Verdana, sans-serif;
   letter-spacing: 0.05rem;
 }
@@ -54,6 +58,11 @@ a {
   display: none;
 }
 
+.mainNavigation-menu > ul > li:last-of-type > a::after {
+  content: "✨";
+  padding-left: .5rem;
+}
+
 .mainNavigation-subMenu {
   display: none;
 }
@@ -61,6 +70,7 @@ a {
 .hamburger {
   cursor: pointer;
   padding: 0.7rem;
+  margin-left: 2rem;
 }
 
 .hamburger > div {
@@ -75,9 +85,8 @@ a {
 
 /* || Tablet Styles */
 @media only screen and (min-width: 770px) {
-  header {
-    width: 95%;
-    margin: 0 auto;
+  body {
+    width: 92%;
   }
 
   .mainNavigation-logo + div {
@@ -90,10 +99,10 @@ a {
   }
 
   .mainNavigation-subMenu a {
-    margin-right: 2rem;
+    margin-left: 2rem;
   }
 
-  .login {
+  a {
     color: hsl(0, 2%, 61%);
   }
 
@@ -107,6 +116,7 @@ a {
     border-radius: 4rem;
     padding: 1.5rem 2rem;
     font-weight: bold;
+    color: hsl(0, 0%, 89%);
   }
 
   .sales {
@@ -126,5 +136,39 @@ a {
   .signup:hover {
     background-image: linear-gradient(181.81deg,hsl(254, 100%, 60%) 15%,
     hsl(254, 73%, 43%) 50%);;
+  }
+}
+
+/* || Desktop Styles */
+@media only screen and (min-width: 1260px) {
+  .mainNavigation {
+    justify-content: flex-start;
+  }
+
+  .mainNavigation-logo + .flex {
+    flex: 1;
+  }
+
+  .mainNavigation-menu {
+    justify-content: space-between;
+    flex: 1;
+  }
+
+  .mainNavigation-menu > ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .mainNavigation-menu > ul > li {
+    margin: 0 2rem;
+  }
+
+  .mainNavigation-subMenu {
+    order: 1;
+  }
+
+  .hamburger {
+    display: none;
   }
 }
