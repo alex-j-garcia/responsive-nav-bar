@@ -19,7 +19,15 @@ body {
 }
 
 a {
-  color: white;
+  text-decoration: none;
+  color: hsl(0, 0%, 89%);
+}
+
+/* || Typography */
+a {
+  font-size: 1.3rem;
+  font-family: Helvetica, Verdana, sans-serif;
+  letter-spacing: 0.05rem;
 }
 
 /* || Utilities */
@@ -46,12 +54,77 @@ a {
   display: none;
 }
 
+.mainNavigation-subMenu {
+  display: none;
+}
+
+.hamburger {
+  cursor: pointer;
+  padding: 0.7rem;
+}
+
 .hamburger > div {
   width: 22px;
-  height: 3px;
-  background-color: white;
+  height: 2px;
+  background-color: hsl(0, 0%, 89%);
 }
 
 .hamburger > div:last-of-type {
   margin-top: .7rem;
+}
+
+/* || Tablet Styles */
+@media only screen and (min-width: 770px) {
+  header {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .mainNavigation-logo + div {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mainNavigation-subMenu {
+    display: block;
+  }
+
+  .mainNavigation-subMenu a {
+    margin-right: 2rem;
+  }
+
+  .login {
+    color: hsl(0, 2%, 61%);
+  }
+
+  .login:hover {
+    color: hsl(0, 0%, 89%);
+  }
+
+  .sales,
+  .signup {
+    display: inline-block;
+    border-radius: 4rem;
+    padding: 1.5rem 2rem;
+    font-weight: bold;
+  }
+
+  .sales {
+    box-shadow: inset 0 0 0 2px hsl(254, 100%, 60%);
+  }
+
+  .sales:hover {
+    box-shadow: inset 0 0 0 2px hsl(254, 100%, 85%);
+  }
+
+  .signup {
+    background-color: hsl(254, 100%, 60%);
+    background-image: linear-gradient(181.81deg,hsl(254, 100%, 60%) 25%,
+      hsl(254, 73%, 43%) 75%);
+  }
+
+  .signup:hover {
+    background-image: linear-gradient(181.81deg,hsl(254, 100%, 60%) 15%,
+    hsl(254, 73%, 43%) 50%);;
+  }
 }
