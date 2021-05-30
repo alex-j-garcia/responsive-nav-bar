@@ -1,34 +1,44 @@
 /* || General Styles */
 :root {
-  font-size: 62.5%;
+  /* Display & Box Model */
   box-sizing: border-box;
+
+  /* Other */
+  font-size: 62.5%;
 }
 
 *,
 *::before,
 *::after {
+  /* Display & Box Model */
   box-sizing: inherit;
   margin: 0;
   padding: 0;
 }
 
 body {
+  /* Display & Box Model */
   width: 97%;
   margin: 0 auto;
+
+  /* Other */
   background-color: rgb(10, 10, 10);
 }
 
 a {
+  /* Other */
   text-decoration: none;
   color: hsl(0, 0%, 89%);
 }
 
 a:hover {
+  /* Other */
   color: hsl(0, 0%, 89%);
 }
 
 /* || Typography */
 a {
+  /* Other */
   font-size: 1.4rem;
   font-family: Helvetica, Verdana, sans-serif;
   letter-spacing: 0.05rem;
@@ -36,104 +46,131 @@ a {
 
 /* || Utilities */
 .debugging {
+  /* Display & Box Model */
   border: 1px solid red;
 }
 
 .flex {
+  /* Display & Box Model */
   display: flex;
 }
 
 .noBullets {
+  /* Other */
   list-style-type: none;
 }
 
 /* || Main Navigation */
 .mainNavigation {
+  /* Display & Box Model */
   justify-content: space-between;
   align-items: center;
   margin-top: 4rem;
 }
 
 .mainNavigation-menu > ul {
+  /* Display & Box Model */
   display: none;
 }
 
 .mainNavigation-menu > ul > li:last-of-type > a::after {
+  /* Display & Box Model */
   content: "✨";
   padding-left: .5rem;
 }
 
 .mainNavigation-subMenu {
+  /* Display & Box Model */
   display: none;
 }
 
 .hamburger {
-  cursor: pointer;
+  /* Display & Box Model */
   padding: 0.7rem;
   margin-left: 2rem;
+
+  /* Other */
+  cursor: pointer;
 }
 
 .hamburger > div {
+  /* Display & Box Model */
   width: 22px;
   height: 2px;
+
+  /* Other */
   background-color: hsl(0, 0%, 89%);
 }
 
 .hamburger > div:last-of-type {
+  /* Display & Box Model */
   margin-top: .7rem;
 }
 
 /* || Tablet Styles */
 @media only screen and (min-width: 770px) {
   body {
+    /* Display & Box Model */
     width: 92%;
   }
 
   .mainNavigation-logo + div {
+    /* Display & Box Model */
     justify-content: space-between;
     align-items: center;
   }
 
   .mainNavigation-subMenu {
+    /* Display & Box Model */
     display: block;
   }
 
   .mainNavigation-subMenu a {
+    /* Display & Box Model */
     margin-left: 2rem;
   }
 
   a {
+    /* Other */
     color: hsl(0, 2%, 61%);
   }
 
   .login:hover {
+    /* Other */
     color: hsl(0, 0%, 89%);
   }
 
   .sales,
   .signup {
+    /* Display & Box Model */
     display: inline-block;
-    border-radius: 4rem;
     padding: 1.5rem 2rem;
+    border-radius: 4rem;
+
+    /* Other */
     font-weight: bold;
     color: hsl(0, 0%, 89%);
   }
 
   .sales {
+    /* Other */
     box-shadow: inset 0 0 0 2px hsl(254, 100%, 60%);
   }
 
   .sales:hover {
+    /* Other */
     box-shadow: inset 0 0 0 2px hsl(254, 100%, 85%);
   }
 
   .signup {
+    /* Other */
     background-color: hsl(254, 100%, 60%);
     background-image: linear-gradient(181.81deg,hsl(254, 100%, 60%) 25%,
       hsl(254, 73%, 43%) 75%);
   }
 
   .signup:hover {
+    /* Other */
     background-image: linear-gradient(181.81deg,hsl(254, 100%, 60%) 15%,
     hsl(254, 73%, 43%) 50%);;
   }
@@ -142,33 +179,40 @@ a {
 /* || Desktop Styles */
 @media only screen and (min-width: 1260px) {
   .mainNavigation {
+    /* Display & Box Model */
     justify-content: flex-start;
   }
 
   .mainNavigation-logo + .flex {
+    /* Display & Box Model */
     flex: 1;
   }
 
   .mainNavigation-menu {
+    /* Display & Box Model */
     justify-content: space-between;
     flex: 1;
   }
 
   .mainNavigation-menu > ul {
+    /* Display & Box Model */
     display: flex;
     justify-content: space-around;
     align-items: center;
   }
 
   .mainNavigation-menu > ul > li {
+    /* Display & Box Model */
     margin: 0 2rem;
   }
 
   .mainNavigation-subMenu {
+    /* Display & Box Model */
     order: 1;
   }
 
   .hamburger {
+    /* Display & Box Model */
     display: none;
   }
 }
